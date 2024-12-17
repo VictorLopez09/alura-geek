@@ -74,11 +74,20 @@ input, .addproduct__button {
     flex-wrap: wrap;
 }
 
+
+.addproduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 .addproduct__form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 300px;
+    
 }
 
 /* -------------------------------------- */

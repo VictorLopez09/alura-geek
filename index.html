@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>AluraGeek</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__items">
+            <img src="img/livehear.png" alt="lives" class="nav__img">
+            <p class="nav__pagrap">
+                AluraGeek
+            </p>
+        </div>
+    </nav>
+
+    <section class="container-main">
+        <article class="product" id="product-list">
+            <div class="product__card">
+                <img src="img/imagen-exemple.png" alt="" class="product__card--img">
+                <div class="product__card-data">
+                    <h3 class="product__name">Stormtrooperssssss</h3>
+                    <div class="product__card-details">
+                        <p class="product__card-price">$0.00</p>
+                        <button class="product__card-delete">
+                            <img src="img/trash.svg" alt="Eliminar producto" width="24px">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="addproduct">
+            <form action="" class="addproduct__form" id="addproduct-form">
+                <h2>Agregar producto</h2>
+                <input type="text" id="product-name" placeholder="Nombre del producto..." required>
+                <input type="number" id="product-price" placeholder="Precio del producto..." required step="0.01" min="0">
+                <input type="text" id="product-image-url" placeholder="URL de la imagen..." required>
+                <button type="submit" class="addproduct__button">Agregar</button>
+            </form>
+        </article>
+
+    </section>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

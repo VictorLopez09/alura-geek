@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* -------------------------------------- */
+/* Reset y estilos globales */
+/* -------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    box-sizing: border-box;
+}
+
+/* -------------------------------------- */
+/* Inputs y botones */
+/* -------------------------------------- */
+input, .addproduct__button {
+    display: block;
+    width: 100%;
+    border: 3px solid #03318C;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.addproduct__button {
+    background-color: #5300C8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addproduct__button:hover {
+    background-color: #3e009a;
+}
+
+/* -------------------------------------- */
+/* Navegación */
+/* -------------------------------------- */
+.nav {
+    background-color: #5300C8;
+}
+
+.nav__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav__img {
+    width: 138px;
+    height: 56px;
+    object-fit: cover;
+    display: block;
+}
+
+.nav__pagrap {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* -------------------------------------- */
+/* Contenedor Principal */
+/* -------------------------------------- */
+.container-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.addproduct__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+}
+
+/* -------------------------------------- */
+/* Productos */
+/* -------------------------------------- */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 50px;
+    box-shadow: -12px 10px 5.8px 0px #00000040;
+    overflow: auto;
+    max-width: 758px;
+    width: 100%;
+}
+
+.product__card {
+    width: 196px;
+    height: 258px;
+    padding: 10px;
+    background-color: #5D04D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 3px solid #000;
+}
+
+.product__card--img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product__card-data {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.product__name {
+    max-width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.product__card-details {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product__card-price {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* -------------------------------------- */
+/* Botón de borrar producto */
+/* -------------------------------------- */
+.product__card-delete {
+    background-color: transparent;
+    border: 2px solid #5300C8;
+    border-radius: 8px;
+    padding: 5px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__card-delete img {
+    width: 24px;
+    height: 24px;
+}
+
+.product__card-delete:hover {
+    background-color: #5300C8;
+    transform: scale(1.1);
+}
+
+.product__card-delete:active {
+    transform: scale(1.05);
+}
+
+/* -------------------------------------- */
+/* Responsividad */
+/* -------------------------------------- */
+@media (max-width: 768px) {
+    .container-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        justify-content: center;
+    }
+
+    .addproduct__form, .product {
+        max-width: 100%;
+    }
+}
